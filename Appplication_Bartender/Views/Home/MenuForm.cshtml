@@ -1,0 +1,43 @@
+﻿@model Appplication_Bartender.Models.Customer
+
+@{
+
+    ViewBag.Title = "MenuForm";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+
+    
+
+}
+
+<h2>MenuForm</h2>
+<img src="~/Pictures/wine.PNG" />
+
+
+@using (Html.BeginForm())
+
+{
+    <p>
+        Your name:
+        @Html.TextBoxFor(x => x.FirstName)
+
+    </p>
+
+    <p>
+        Your phone:
+        @Html.TextBoxFor(x => x.Phone)
+
+    </p>
+    <p>
+        Choose you drink:
+        @Html.HiddenFor(x => x.DrinkType)
+        @Html.DropDownListFor(x => x.DrinkType, new[]
+{
+       new SelectListItem() { Text = "Wine" },
+       new SelectListItem() { Text = "Beer" },
+       new SelectListItem() { Text = "Margaritas" },
+       new SelectListItem() { Text = "Martini" },
+       new SelectListItem() { Text = "Cocktail" },
+       new SelectListItem() { Text = "Vodka" },}, "Choose an option")
+    </p> <input type="submit" value="Submit" /> }
+
+

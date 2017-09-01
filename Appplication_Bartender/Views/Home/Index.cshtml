@@ -1,0 +1,14 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+
+<div class="jumbotron">
+    <h1>Bartender Application</h1>
+    <p class="lead">@ViewBag.Greeting</p>
+    <p class="lead">Please select your drink.</p>
+     @Html.ActionLink("Menu", "MenuForm")
+</div>
+<div>
+    <img src="~/Pictures/pexels-photo-110472.jpeg" alt="Bartender"/>
+</div>
+
